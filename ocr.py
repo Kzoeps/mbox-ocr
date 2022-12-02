@@ -12,7 +12,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 img_path = './mbob-test.jpeg'
 ocr = PaddleOCR(use_angle_cls=True, lang='en')
-CORS(app, origins="*")
+CORS(app, origins=["http://localhost:3000", "https://www.mboxed.vercel.app","https://mboxed.vercel.app"])
 UPLOAD_FOLDER = './temp/images'
 
 
